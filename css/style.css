@@ -493,4 +493,8 @@ p {
   align-self: stretch;
 }
 
+.economy-section .section-title {
+  border-bottom: 4px solid #000; /* nero */
+}
+
 
