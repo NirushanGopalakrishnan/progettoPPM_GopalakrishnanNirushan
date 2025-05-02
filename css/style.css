@@ -497,4 +497,114 @@ p {
   border-bottom: 4px solid #000; /* nero */
 }
 
+/* SEZIONE SPORT */
+.sport-section {
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 0;
+  border-top: 1px solid #ccc;
+}
+
+.section-title-wrapper {
+  text-align: center;
+}
+
+.sport-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-bottom: 4px solid #003366;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 40px;
+}
+
+.sport-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.sport-main-article {
+  flex: 1.5;
+  border-right: 1px solid #ddd;
+  padding-right: 30px;
+}
+
+.sport-main-article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.sport-main-article h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.sport-side-articles {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.sport-article-row {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.sport-article {
+  flex: 1;
+}
+
+.sport-article img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 8px;
+}
+
+.sport-article h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.sport-article .author {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Linea divisoria verticale tra le due colonne degli articoli secondari */
+.sport-article.bordered {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sport-grid {
+    flex-direction: column;
+  }
+
+  .sport-main-article {
+    border-right: none;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .sport-article-row {
+    flex-direction: column;
+  }
+
+  .sport-article.bordered {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+
+
 
