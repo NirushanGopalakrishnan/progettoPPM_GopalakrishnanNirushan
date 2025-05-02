@@ -19,8 +19,8 @@ img {
 }
 
 .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 97%;
+  max-width: 1250px;
   margin: 0 auto;
 }
 
@@ -184,17 +184,12 @@ button {
   margin-top: 10px;
 }
 
-.highlight, .video {
-  background-color: #f9f9f9;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
+.highlight,
+.video,
 .highlight-large {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border: 1px solid #ddd;
-  margin: 30px 0;
+  background-color: transparent;
+  padding: 0;
+  border: none;
 }
 
 .highlight-large img {
@@ -259,7 +254,7 @@ p {
 }
 
 .economy-feature img {
-  width: 50%;
+  width: 60%;
   height: auto;
 }
 
@@ -397,9 +392,9 @@ p {
 }
 
 .daily-video article.video {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  padding: 10px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 }
 
 /* I FATTI DEL GIORNO */
@@ -449,24 +444,19 @@ p {
 }
 
 .site-wrapper {
-  max-width: 1200px;
+  max-width: 1250px;
   margin: 0 auto;
   background-color: #fff;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
   min-height: 100vh;
+  box-shadow: none;
 }
 
-.economy-feature img {
-  width: 60%; /* ingrandita rispetto a prima */
-  height: auto;
-}
-
-/* BLOCCO SOTTO CON IMMAGINE A SINISTRA + TESTI + LINEA */
+/* BLOCCO SOTTO ECONOMIA */
 .economy-inline-row {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  margin-top: 20px; /* tolto il border-top */
+  margin-top: 20px;
 }
 
 .economy-inline-row img {
@@ -494,14 +484,14 @@ p {
 }
 
 .economy-section .section-title {
-  border-bottom: 4px solid #000; /* nero */
+  border-bottom: 4px solid #000;
 }
 
-/* SEZIONE SPORT */
+/* SPORT */
 .sport-section {
   width: 100%;
   background-color: #fff;
-  padding: 50px 0;
+  padding: 20px 0 10px;
   border-top: 1px solid #ccc;
 }
 
@@ -515,13 +505,13 @@ p {
   border-bottom: 4px solid #003366;
   display: inline-block;
   padding-bottom: 6px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .sport-grid {
   display: flex;
   gap: 30px;
-  flex-wrap: wrap;
+  position: relative;
 }
 
 .sport-main-article {
@@ -537,9 +527,15 @@ p {
 }
 
 .sport-main-article h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+}
+
+.sport-main-article .author {
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #666;
 }
 
 .sport-side-articles {
@@ -547,13 +543,16 @@ p {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .sport-article-row {
   display: flex;
-  gap: 20px;
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 20px;
+  justify-content: space-between;
+  gap: 30px;
+  position: relative;
 }
 
 .sport-article {
@@ -578,13 +577,23 @@ p {
   color: #555;
 }
 
-/* Linea divisoria verticale tra le due colonne degli articoli secondari */
-.sport-article.bordered {
-  border-right: 1px solid #ccc;
-  padding-right: 20px;
+.sport-article-row.with-bottom-divider article {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
 }
 
-/* Responsive */
+.sport-vertical-divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 1px;
+  background-color: #ccc;
+  transform: translateX(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
 @media (max-width: 768px) {
   .sport-grid {
     flex-direction: column;
@@ -593,16 +602,164 @@ p {
   .sport-main-article {
     border-right: none;
     padding-right: 0;
-    margin-bottom: 30px;
+  }
+
+  .sport-side-articles {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .sport-vertical-divider {
+    display: none;
   }
 
   .sport-article-row {
     flex-direction: column;
   }
 
-  .sport-article.bordered {
-    border-right: none;
-    padding-right: 0;
+  .sport-article-row.with-bottom-divider article {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
+  }
+}
+
+/* MAGAZINE */
+.magazine-section {
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.magazine-section .section-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 4px solid #000;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+/* Articolo principale */
+.magazine-main-item {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.magazine-main-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.magazine-main-item .magazine-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  background-color: #fff;
+  padding: 12px 18px;
+  width: 92%;
+  max-width: 370px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.magazine-main-item .magazine-caption .category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.magazine-main-item .magazine-caption h3 {
+  font-size: 1.15rem;
+  font-weight: normal;
+  margin-bottom: 6px;
+}
+
+.magazine-main-item .magazine-caption .author {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Griglia articoli secondari */
+.magazine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 20px;
+}
+
+.magazine-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.magazine-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.magazine-item .magazine-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 60%);
+  background-color: #fff;
+  padding: 12px 18px;
+  width: 92%;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  z-index: 2;
+}
+
+.magazine-item .magazine-caption .category {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.magazine-item .magazine-caption h4 {
+  font-size: 0.95rem;
+  font-weight: normal;
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+.magazine-item .magazine-caption .author {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .magazine-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .magazine-main-item .magazine-caption,
+  .magazine-item .magazine-caption {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+    box-shadow: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .magazine-item {
+    margin-bottom: 30px;
   }
 }
 
