@@ -642,7 +642,7 @@ p {
 /* Articolo principale */
 .magazine-main-item {
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 80px;
 }
 
 .magazine-main-item img {
@@ -657,9 +657,9 @@ p {
   left: 50%;
   transform: translate(-50%, 60%);
   background-color: #fff;
-  padding: 12px 18px;
-  width: 92%;
-  max-width: 370px;
+  padding: 12px 24px; /* meno alto, più largo */
+  width: 98%;         /* più largo */
+  max-width: 700px;   /* più largo */
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
@@ -676,7 +676,7 @@ p {
 }
 
 .magazine-main-item .magazine-caption h3 {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: normal;
   margin-bottom: 6px;
 }
@@ -762,6 +762,8 @@ p {
     margin-bottom: 30px;
   }
 }
+
+
 
 
 
