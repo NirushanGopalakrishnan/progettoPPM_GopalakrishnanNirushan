@@ -919,6 +919,347 @@ p {
   line-height: 1.4;
 }
 
+.podcast-section {
+  background-color: #2e3f50;
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+}
+
+.podcast-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  border-bottom: 4px solid #f60; /* arancione */
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+.podcast-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.podcast-item {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  border-left: 1px solid #999; /* neutro */
+  padding-left: 10px;
+}
+
+.podcast-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.podcast-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.podcast-text .category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #ff9900;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.podcast-text h4 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.podcast-text .author {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .podcast-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .podcast-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.video-section {
+  background-color: #2e3f50;
+  padding: 40px 0;
+  border-top: 1px solid #ccc;
+}
+
+.video-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  border-bottom: 4px solid #fff;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.video-item {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  border-left: 1px solid #999;
+  padding-left: 10px;
+}
+
+.video-item:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.video-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.video-text .category {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #b8cce4;
+  margin-bottom: 4px;
+  display: block;
+}
+
+
+.video-text h4 {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.video-text .author {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .video-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main-footer {
+  background-color: #fff;
+  font-size: 0.85rem;
+  border-top: 1px solid #ccc;
+}
+
+.footer-inner {
+  padding: 0;
+}
+
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  border-top: 1px solid #ccc;
+}
+
+.footer-left {
+  flex: 0 0 240px;
+  padding: 40px 20px 40px 40px;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+.footer-subscribe {
+  margin: 10px 0;
+  padding: 6px 12px;
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.footer-app a {
+  color: #0066cc;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 5px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-divider {
+  width: 1px;
+  background-color: #ccc;
+  height: 100%;
+}
+
+.footer-right {
+  flex: 1;
+  padding: 40px 40px 40px 30px;
+}
+
+.footer-supplements h4 {
+  font-weight: bold;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.footer-supplements ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+
+.footer-supplements li a {
+  font-size: 0.85rem;
+  color: #111;
+  text-decoration: none;
+}
+
+.footer-links-grid {
+  display: grid;
+  gap: 30px;
+}
+
+.footer-columns-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-links-grid h4 {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.footer-links-grid ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.footer-links-grid li {
+  margin-bottom: 4px;
+}
+
+.footer-links-grid a {
+  text-decoration: none;
+  color: #111;
+  font-size: 0.85rem;
+}
+
+.footer-links-grid a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  background-color: #eee;
+  padding: 15px 5%;
+  text-align: center;
+  font-size: 0.75rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Wrapper esterno del footer, a larghezza piena */
+.footer-outer {
+  width: 100%;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+/* Allineamento orizzontale tra logo e titoli */
+.footer-left {
+  flex: 0 0 240px;
+  padding: 40px 20px 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer-logo {
+  font-size: 1.8rem;
+  font-family: Georgia, serif;
+  margin-bottom: 10px;
+}
+
+/* Linea verticale divisoria */
+.footer-divider {
+  width: 1px;
+  background-color: #ccc;
+  height: auto;
+  align-self: stretch;
+}
+
+/* La riga .footer-columns ora è centrata nel container */
+.footer-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Footer-right con padding simmetrico */
+.footer-right {
+  flex: 1;
+  padding: 40px 0 40px 30px;
+}
+
+
+
+
+
+
+
+
+
 
 
 
