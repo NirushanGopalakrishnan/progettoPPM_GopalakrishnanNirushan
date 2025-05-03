@@ -819,9 +819,10 @@ p {
 .focus-subgrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0;
+  gap: 20px;
   border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+  padding-top: 20px;
+  border-bottom: none;
 }
 
 .focus-subgrid article {
@@ -871,6 +872,55 @@ p {
     border-bottom: none;
   }
 }
+
+.social-news-section {
+  padding: 40px 0;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.social-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 4px solid #f60;
+  display: inline-block;
+  padding-bottom: 6px;
+  margin-bottom: 30px;
+}
+
+.social-news-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.social-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.social-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.social-item h4 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  background: none;
+  font-weight: normal;
+  line-height: 1.4;
+}
+
+
+
 
 
 
