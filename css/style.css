@@ -316,68 +316,98 @@ p {
   }
 }
 
-/* SEZIONE RISULTATI - STILE NUOVO */
-.match-strip {
-  background-color: #f8f8f8;
+.match-results {
+  background-color: #ffffff; /* Sfondo bianco per la sezione dei risultati */
   padding: 20px 0;
-  overflow-x: auto;
-  white-space: nowrap;
 }
 
-.match-strip-container {
+.match-scroll-container {
+  overflow: visible; /* Rimuove completamente la barra di scorrimento */
+}
+
+.match-row {
   display: flex;
-  gap: 12px;
+  gap: 5px; /* Ridotto lo spazio tra le card in orizzontale */
   flex-wrap: wrap;
-  justify-content: center;
-  max-width: 1250px;
-  margin: 0 auto;
-  padding: 0 10px;
+  justify-content: center; /* Allinea i risultati al centro */
+  margin-bottom: 8px; /* Ridotto lo spazio tra le righe */
 }
 
-.match-item {
-  background-color: #fff;
+.match-card {
+  background-color: #f0f0f0; /* Sfondo grigio per le card */
   border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 6px 10px;
-  min-width: 220px;
-  max-width: 220px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  font-family: Arial, sans-serif;
-  font-size: 0.85rem;
-}
-
-.match-item.live {
-  border: 2px solid #c00;
-}
-
-.match-item img {
-  width: 24px;
-  height: 24px;
-  object-fit: contain;
-}
-
-.team-name {
+  justify-content: center;
+  font-size: 0.65rem; /* Font più piccolo per una maggiore compattezza */
   font-weight: bold;
+  white-space: nowrap;
+  min-width: 230px;
+  max-width: 220px; /* Uniforma le dimensioni */
+  height: 50px; /* Altezza della card invariata */
+  position: relative;
+  color: #111; /* Tutto in nero */
+  margin-bottom: -6px;
+}
+
+.match-card .status {
+  font-size: 0.6rem; /* Dimensione ridotta */
+  color: #000; /* Colore status in nero */
+  margin-bottom: 3px; /* Spazio tra 'LIVE'/'FINE' e il risultato */
+  margin-top: 10px; /* Distanza maggiore dal bordo superiore della casella */
+}
+
+.match-card .teams {
+  display: flex;
+  justify-content: space-between; /* Disposizione dei nomi delle squadre a sinistra e destra */
+  width: 100%;
+  align-items: center;
+}
+
+.match-card .team {
+  font-size: 0.7rem; /* Font ridotto */
   color: #111;
-  text-align: center;
 }
 
-.match-status {
-  font-size: 0.75rem;
-  font-weight: bold;
-  color: #666;
-  margin: 2px 0;
+.match-card .left {
+  text-align: left;
 }
 
-.score {
-  background-color: #eee;
-  padding: 3px 8px;
+.match-card .right {
+  text-align: right;
+}
+
+.match-card .score {
+  background-color: #ffffff; /* Sfondo bianco per il contenitore del risultato */
+  padding: 3px 6px;
   border-radius: 4px;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 0.9rem; /* Font ridotto per il punteggio */
+  margin-top: -5px; /* Sposta il punteggio leggermente verso l'alto */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Centra verticalmente il punteggio */
+  justify-content: center; /* Centra orizzontalmente il punteggio */
+}
+
+.match-card .score {
+  background-color: #ffffff; /* Sfondo bianco per il contenitore del risultato */
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem; /* Font ridotto per il punteggio */
+  margin-top: -5px; /* Sposta il punteggio leggermente verso l'alto */
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center; /* Centra verticalmente il punteggio */
+  justify-content: center; /* Centra orizzontalmente il punteggio */
+}
+
+.match-row {
+  justify-content: center; /* Allinea i risultati al centro */
+  margin-bottom: 12px; /* Aggiunge più spazio tra la prima e la seconda riga */
 }
 
 /* MOBILE FIX */
