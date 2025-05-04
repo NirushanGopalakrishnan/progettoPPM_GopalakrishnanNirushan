@@ -1078,42 +1078,68 @@ p {
   }
 }
 
+/* FOOTER PRINCIPALE */
 .main-footer {
   background-color: #fff;
   font-size: 0.85rem;
   border-top: 1px solid #ccc;
+  margin: 0 auto;
+  max-width: 1250px;
+  width: 97%;
 }
 
-.footer-inner {
-  padding: 0;
-}
-
+/* STRUTTURA INTERNA */
 .footer-columns {
   display: flex;
   align-items: flex-start;
+  gap: 30px;
   border-top: 1px solid #ccc;
 }
 
+/* COLONNA SINISTRA */
 .footer-left {
-  flex: 0 0 240px;
-  padding: 40px 20px 40px 40px;
+  flex: 0 0 260px;
+  padding: 40px 30px 40px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
+/* Logo */
 .footer-logo {
   font-size: 1.8rem;
   font-family: Georgia, serif;
-  margin-bottom: 10px;
+  margin: 0;
+  white-space: nowrap;
+  line-height: 1;
+  margin-bottom: 8px;
 }
 
+/* Pulsante Abbonati */
 .footer-subscribe {
-  margin: 10px 0;
-  padding: 6px 12px;
+  padding: 8px 16px;
   background-color: #0066cc;
   color: white;
   border: none;
   font-weight: bold;
+  font-size: 0.9rem;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Link APP */
+.footer-app {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.footer-app::before {
+  content: "APP";
+  display: block;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 4px;
 }
 
 .footer-app a {
@@ -1123,28 +1149,48 @@ p {
   margin-right: 5px;
 }
 
+/* SOCIAL */
+.footer-social {
+  padding-top: 0;
+  margin-top: 0;
+  border-top: none;
+}
+
+.footer-social::before {
+  content: "SOCIAL";
+  display: block;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 4px;
+}
+
 .social-icons {
-  margin-top: 10px;
+  display: flex;
+  gap: 15px;
+  font-size: 1.2rem;
+  margin-top: 8px;
 }
 
 .social-icons a {
-  margin-right: 12px;
-  font-size: 1.2rem;
   color: #111;
   text-decoration: none;
 }
 
+/* LINEA VERTICALE CENTRALE */
 .footer-divider {
   width: 1px;
   background-color: #ccc;
-  height: 100%;
+  height: auto;
+  align-self: stretch;
 }
 
+/* COLONNA DESTRA */
 .footer-right {
   flex: 1;
-  padding: 40px 40px 40px 30px;
+  padding: 40px 0 40px 30px;
 }
 
+/* SUPPLEMENTI */
 .footer-supplements h4 {
   font-weight: bold;
   font-size: 0.9rem;
@@ -1165,6 +1211,7 @@ p {
   text-decoration: none;
 }
 
+/* GRIGLIA A 3 COLONNE */
 .footer-links-grid {
   display: grid;
   gap: 30px;
@@ -1200,57 +1247,50 @@ p {
   text-decoration: underline;
 }
 
-.footer-bottom {
+/* BOTTOM BAR */
+.footer-bottom-bar {
   background-color: #eee;
-  padding: 15px 5%;
-  text-align: center;
-  font-size: 0.75rem;
+  border-top: 1px solid #ccc;
+  font-size: 11px; /* aumentato leggermente */
   color: #555;
-  border-top: 1px solid #ccc;
-}
-
-/* Wrapper esterno del footer, a larghezza piena */
-.footer-outer {
-  width: 100%;
-  background-color: #fff;
-  border-top: 1px solid #ccc;
-}
-
-/* Allineamento orizzontale tra logo e titoli */
-.footer-left {
-  flex: 0 0 240px;
-  padding: 40px 20px 40px 0;
+  font-family: Arial, sans-serif;
+  height: 36px; /* leggermente più alto */
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.2;
 }
 
-.footer-logo {
-  font-size: 1.8rem;
-  font-family: Georgia, serif;
-  margin-bottom: 10px;
+.footer-bottom-inner {
+  max-width: 1250px;
+  padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-/* Linea verticale divisoria */
-.footer-divider {
-  width: 1px;
-  background-color: #ccc;
-  height: auto;
-  align-self: stretch;
-}
 
-/* La riga .footer-columns ora è centrata nel container */
-.footer-columns {
-  display: flex;
-  align-items: flex-start;
-  gap: 30px;
-}
 
-/* Footer-right con padding simmetrico */
-.footer-right {
-  flex: 1;
-  padding: 40px 0 40px 30px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
