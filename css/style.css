@@ -1,3 +1,15 @@
+.top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
 /* RESET BASE */
 * {
   margin: 0;
@@ -32,36 +44,16 @@ button {
 }
 
 /* HEADER */
-.main-header .top-bar {
-  background-color: #f5f5f5;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+.main-header
 
 .left-controls,
-.right-controls {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
 
-.subscribe {
-  background-color: #0066cc;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
-}
 
-.login {
-  font-weight: bold;
-  color: #0066cc;
-  cursor: pointer;
-}
 
-/* BARRA NOTIZIE */
+
+
+
+  /* BARRA NOTIZIE */
 .news-bar {
   background-color: #2e3f50;
   padding: 12px 0;
@@ -416,15 +408,9 @@ p {
 
 /* MOBILE FIX */
 @media (max-width: 768px) {
-  .match-strip-container {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
 
-  .match-item {
-    flex: 0 0 auto;
-  }
+
+
 }
 
 
@@ -497,12 +483,7 @@ p {
   margin-bottom: 20px;
 }
 
-.adv-label {
-  font-size: 0.75rem;
-  color: #666;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-}
+
 
 .adv-box img {
   width: 100%;
@@ -1260,41 +1241,15 @@ p {
 }
 
 /* Logo */
-.footer-logo {
-  font-size: 1.8rem;
-  font-family: Georgia, serif;
-  margin: 0;
-  white-space: nowrap;
-  line-height: 1;
-  margin-bottom: 8px;
-}
+
 
 /* Pulsante Abbonati */
-.footer-subscribe {
-  padding: 8px 16px;
-  background-color: #0066cc;
-  color: white;
-  border: none;
-  font-weight: bold;
-  font-size: 0.9rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
+
 
 /* Link APP */
-.footer-app {
-  padding-top: 0;
-  margin-top: 0;
-  border-top: none;
-}
 
-.footer-app::before {
-  content: "APP";
-  display: block;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 4px;
-}
+
+
 
 .footer-app a {
   color: #0066cc;
@@ -1310,13 +1265,7 @@ p {
   border-top: none;
 }
 
-.footer-social::before {
-  content: "SOCIAL";
-  display: block;
-  font-weight: bold;
-  color: #111;
-  margin-bottom: 4px;
-}
+
 
 .social-icons {
   display: flex;
@@ -1573,20 +1522,8 @@ p {
   }
 }
 
-.top-bar {
-  position: relative;
-  font-size: 0.9rem;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-}
-.top-bar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background-color: #f8f9fa; /* lo stesso colore della barra */
-}
+
+
 
 .top-bar-center {
   position: absolute;
@@ -1601,3 +1538,299 @@ p {
   font-size: 1rem;
 }
 
+
+/* FOOTER MOBILE */
+@media (max-width: 768px) {
+  .main-footer {
+    padding: 20px 10px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .footer-left,
+  .footer-right {
+    padding: 0;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+
+  .footer-app-links {
+    text-align: center;
+  }
+
+  .footer-app-links a {
+    display: inline-block;
+    margin: 4px 6px;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    text-align: center;
+  }
+
+  .footer-links-grid,
+  .footer-columns-3 {
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+  .footer-links-grid h4 {
+    margin-top: 20px;
+  }
+}
+
+/* FOOTER TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-columns {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  .footer-left {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-right {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .footer-divider {
+    display: none;
+  }
+
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* FIX FOOTER MOBILE MIGLIORATO */
+@media (max-width: 768px) {
+  .footer-left {
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-button {
+    margin: 10px 0;
+  }
+
+  .footer-app-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .footer-app-links span {
+    display: none; /* Rimuove 'APP' testo se presente */
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .footer-supplements ul {
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .footer-links-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+
+  .footer-links-grid > div {
+    break-inside: avoid;
+  }
+
+  .footer-links-grid h4 {
+    margin-top: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* ZONA ROSSA - centra tutto il blocco sinistro */
+  .footer-left {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* ZONA VIOLA - App e social sulla stessa riga */
+  .footer-app-links {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .footer-app-links a {
+    margin: 0;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
+
+  .footer-social .social-icons {
+    margin-top: 0;
+  }
+
+  /* ZONA GIALLA - supplementi allineati a sinistra */
+  .footer-supplements ul {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  /* ZONA VERDE - griglia 2 colonne ben allineate */
+  .footer-links-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    column-gap: 30px;
+  }
+
+  .footer-links-grid > div {
+    break-inside: avoid;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Unifica App e Social sulla stessa linea */
+  .footer-app-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+  }
+
+  .footer-social {
+    margin-top: 0;
+  }
+
+  .footer-social .social-icons {
+    margin-top: 0;
+  }
+
+  /* Inseriamo social dentro app-links per unificare */
+  .footer-app-links,
+  .footer-social .social-icons {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Elimina spazio in eccesso dopo i blocchi */
+  .footer-links-grid ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-right {
+    padding-bottom: 20px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* Nuovo wrapper che unisce app e social */
+  .footer-app-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .footer-app-links {
+    display: flex;
+    gap: 10px;
+  }
+
+  .footer-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+
+  /* Riduce spazio sotto l'ultima colonna */
+  .footer-links-grid > div:last-child ul:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-right {
+    padding-bottom: 10px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-left {
+    flex: 0 0 260px;
+    padding: 40px 0;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .footer-right {
+    flex: 1;
+    padding: 40px 0;
+  }
+
+  .footer-divider {
+    display: block;
+    width: 1px;
+    background-color: #ccc;
+    height: auto;
+    align-self: stretch;
+  }
+
+  .footer-app-social {
+    justify-content: flex-start;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+}
+
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .footer-links-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
