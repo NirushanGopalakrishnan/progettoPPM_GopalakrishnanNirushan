@@ -48,11 +48,6 @@ button {
 
 .left-controls,
 
-
-
-
-
-
   /* BARRA NOTIZIE */
 .news-bar {
   background-color: #2e3f50;
@@ -1875,5 +1870,155 @@ p {
     font-size: 0.9rem;
     line-height: 1.2;
     margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar .d-flex {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .top-bar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .top-bar-center {
+    position: static !important;
+    transform: none !important;
+    order: -1;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    height: auto;
+    padding: 8px 12px;
+  }
+
+  .top-bar .d-flex {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+
+  .top-bar .d-flex > div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .top-bar .d-flex > div:first-child span,
+  .top-bar .d-flex > div:first-child a span {
+    display: none; /* Nasconde i testi accanto alle icone */
+  }
+
+  .top-bar-center {
+    position: static !important;
+    transform: none !important;
+    font-weight: bold;
+    font-size: 0.9rem;
+    order: 0;
+    margin: 0 auto;
+  }
+
+  .top-bar .d-flex > div:last-child a {
+    display: none; /* Nasconde "Accedi" */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Rimuove l'icona della lente */
+  .top-bar .d-flex > div:first-child a:nth-child(2) {
+    display: none;
+  }
+
+  /* Navbar sticky (già presente, ma lo ribadiamo per sicurezza) */
+  .top-bar {
+    position: sticky !important;
+    top: 0;
+    z-index: 999;
+    background-color: #f8f9fa;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar i.bi-search {
+    display: none !important;
+  }
+
+  .top-bar i.bi-search + span {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Container principale: distribuisce 3 zone */
+  .top-bar .d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  /* Prima colonna: menu + campanella */
+  .top-bar .d-flex > div:first-child {
+    display: flex;
+    gap: 10px;
+  }
+
+  /* Nasconde icona lente e testi */
+  .top-bar i.bi-search,
+  .top-bar i.bi-search + span,
+  .top-bar .d-flex > div:first-child a:nth-child(2) {
+    display: none !important;
+  }
+
+  .top-bar .d-flex > div:first-child span {
+    display: none;
+  }
+
+  /* Centro: abbonati centrato */
+  .top-bar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+
+  /* Destra: simbolo R e profilo */
+  .top-bar .d-flex > div:last-child a {
+    display: none;
+  }
+
+  /* Navbar sticky */
+  .top-bar {
+    position: sticky !important;
+    top: 0;
+    z-index: 9999 !important;
+    background-color: #f8f9fa !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-bar {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+    background-color: #f8f9fa !important;
+  }
+
+  .site-wrapper {
+    padding-top: 60px; /* Spazio per compensare la navbar fissa */
   }
 }
