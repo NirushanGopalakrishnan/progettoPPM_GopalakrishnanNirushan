@@ -1834,3 +1834,46 @@ p {
     gap: 30px;
   }
 }
+
+
+@media (max-width: 768px) {
+  .match-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .match-row {
+    display: contents; /* non crea blocchi extra */
+  }
+
+  .match-card {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 230px;
+    height: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .news-bar .container {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .news-bar img {
+    width: 120px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .news-bar h3 {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin: 0;
+  }
+}
