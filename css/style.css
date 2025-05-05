@@ -91,9 +91,20 @@ button {
   text-align: center;
 }
 
-.logo {
-  font-size: 3.5rem;
-  font-family: 'Georgia', serif;
+.logo-placeholder {
+  display: block;
+  margin: 0 auto;
+  width: 420px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.logo-footer {
+  display: block;
+  margin-bottom: 10px;
+  width: 200px;
+  height: 40px;
+  object-fit: contain;
 }
 
 .date {
@@ -461,7 +472,7 @@ p {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: white;
+  color: black;
   font-size: 1.1rem;
   font-weight: bold;
   z-index: 1;
@@ -528,7 +539,7 @@ p {
 .meteo-category {
   display: block;
   font-weight: bold;
-  color: #f60;
+  color: #000;
   font-size: 0.85rem;
   margin-bottom: 8px;
 }
@@ -1056,7 +1067,7 @@ p {
   width: 100%;
   padding: 12px 10px;
   font-size: 1.2rem;
-  color: #fff;
+  color: #000;
   background: none;
   font-weight: normal;
   line-height: 1.4;
@@ -1404,6 +1415,20 @@ p {
   line-height: 1.2;
 }
 
+.footer-button {
+  background-color: 	#4170a3;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 2px;
+  width: auto;
+  min-width: unset;
+  max-width: fit-content;
+  display: inline-block; /* evita che si allarghi da solo */
+}
+
 .footer-bottom-inner {
   max-width: 1250px;
   padding: 0 10px;
@@ -1413,7 +1438,13 @@ p {
   text-overflow: ellipsis;
 }
 
-
+.footer-app-links a {
+  color: #6e6e6e;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-decoration: none;
+  margin-right: 8px;
+}
 
 /* --- RESPONSIVE MIGLIORATO --- */
 
