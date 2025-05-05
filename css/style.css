@@ -392,19 +392,6 @@ p {
   justify-content: center; /* Centra orizzontalmente il punteggio */
 }
 
-.match-card .score {
-  background-color: #ffffff; /* Sfondo bianco per il contenitore del risultato */
-  padding: 3px 6px;
-  border-radius: 4px;
-  font-weight: bold;
-  font-size: 0.9rem; /* Font ridotto per il punteggio */
-  margin-top: -5px; /* Sposta il punteggio leggermente verso l'alto */
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center; /* Centra verticalmente il punteggio */
-  justify-content: center; /* Centra orizzontalmente il punteggio */
-}
-
 .match-row {
   justify-content: center; /* Allinea i risultati al centro */
   margin-bottom: 12px; /* Aggiunge più spazio tra la prima e la seconda riga */
@@ -458,6 +445,93 @@ p {
   background-color: transparent;
   border: none;
   padding: 0;
+}
+
+.featured-video {
+  position: relative;
+}
+
+.video-overlay-title {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.daily-video .video img {
+  height: 580px; /* il doppio di 340 */
+  object-fit: cover;
+}
+
+/* ADV*/
+.adv-box {
+  margin-top: 30px;
+  width: 100%; /* prende tutta la colonna */
+}
+
+.adv-divider {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.adv-label {
+  font-size: 0.75rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.adv-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* METEO */
+.meteo-box {
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+}
+
+.meteo-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-bottom: 4px solid #f60;
+  display: inline-block;
+  padding-bottom: 4px;
+  margin-bottom: 20px;
+}
+
+.meteo-box img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.meteo-caption {
+  padding: 0 10px;
+}
+
+.meteo-category {
+  display: block;
+  font-weight: bold;
+  color: #f60;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.meteo-headline {
+  font-size: 1rem;
+  font-weight: normal;
+  color: #111;
+  line-height: 1.4;
 }
 
 /* I FATTI DEL GIORNO */
@@ -1461,4 +1535,3 @@ p {
     object-fit: cover;
   }
 }
-
