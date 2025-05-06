@@ -357,7 +357,7 @@ p {
 }
 
 .match-card .status {
-  font-size: 0.6rem; /* Dimensione ridotta */
+  font-size: 0.7rem; /* Dimensione ridotta */
   color: #000; /* Colore status in nero */
   margin-bottom: 3px; /* Spazio tra 'LIVE'/'FINE' e il risultato */
   margin-top: 10px; /* Distanza maggiore dal bordo superiore della casella */
