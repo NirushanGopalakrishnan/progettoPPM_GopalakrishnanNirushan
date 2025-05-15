@@ -1676,6 +1676,7 @@ p {
   }
 }
 
+
 @media (max-width: 576px) {
   .video-grid {
     grid-template-columns: 1fr;
